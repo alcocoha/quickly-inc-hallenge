@@ -1,0 +1,21 @@
+// Main container
+.navbar-container{
+    // Title
+    &__title{
+        text-decoration: none;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    // Page links
+    &__link-container{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+    }
+}
