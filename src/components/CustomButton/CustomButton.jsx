@@ -2,6 +2,13 @@ import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import './styles.scss';
 
+/**
+ * Main component button
+ * @prop title:<string> button title
+ * @prop onClick:<function> click event function
+ * @prop disabled:<boolean> disable the button
+ * @prop loading:<boolean> flag to activate the spinner
+ */
 export const CustomButton = ({
   title = '',
   onClick = () => {},

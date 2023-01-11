@@ -3,9 +3,9 @@ import './styles.scss';
 
 /**
  * Component to wrap content
- * title: string
- * children: jsx content
- * width: number, width of card represented in pixels
+ * @prop title: <string>
+ * @prop children: <jsx> content
+ * @prop width: <number>, width of card represented in pixels
  */
 export const CustomCard = ({ title, children, width = 600, icon = '' }) => {
   return (

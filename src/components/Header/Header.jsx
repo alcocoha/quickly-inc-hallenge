@@ -14,8 +14,14 @@ import './styles.scss';
  * title: string
  */
 export const Header = ({ title }) => {
+  /**
+   * SessionActive to read if you are logged in or not
+   */
   const { sessionActive } = useContext(DataSessionContext);
 
+  /**
+   * This function evaluates if a session exists or not in order to create the corresponding menu
+   */
   const buildMenu = () => {
     const data = sessionActive ? menuLogin : menuLogout;
     return data.map((item) => (
@@ -25,6 +31,9 @@ export const Header = ({ title }) => {
     ));
   };
 
+  /**
+   * Bootstrap is used to speed up the assembly of the navigation bar
+   */
   return (
     <Navbar key="sm" bg="light" expand="sm" className="mb-3 navbar-container">
       <Container fluid>

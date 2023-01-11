@@ -3,12 +3,12 @@ import './styles.scss';
 
 /**
  * Component to create different entries with the same structure just by changing the type
- * type: string < text | password | email >
- * onChange: function to manage the value
- * placeholder: string
- * label: string
- * value: dynamic string
- * errorMessage: error string
+ * @prop type: string < text | password | email >
+ * @prop onChange: function to manage the value
+ * @prop placeholder: string
+ * @prop label: string
+ * @prop value: dynamic string
+ * @prop errorMessage: error string to show in UI
  */
 export const CustomInput = ({
   id,
