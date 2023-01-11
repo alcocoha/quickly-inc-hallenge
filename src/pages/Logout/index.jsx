@@ -10,7 +10,7 @@ const Logout = () => {
     removeSession();
     setSessionActive(false);
     navigate('/login');
-  }, []);
+  }, [navigate, setSessionActive]);
 
   return <div></div>;
 };

@@ -22,16 +22,17 @@ export const Profile = () => {
 
   const getData = async () => {
     const response = await handleFetch();
-    console.log('response', response);
     setUserData(response);
   };
 
   useEffect(() => {
-    getData();
+    if (userData === null) {
+      getData();
+    }
     if (!sessionActive) {
       navigate('/404');
     }
-  }, []);
+  }, [navigate, sessionActive]);
 
   return (
     <>

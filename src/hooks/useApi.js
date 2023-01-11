@@ -9,7 +9,6 @@ export const useApi = ({ path = '', method = 'get', body = {} }) => {
 
   const session = getSessionData('session');
   const token = session?.token;
-  console.log('token:', token);
 
   if (token) headers.Authorization = `Bearer ${token}`;
 

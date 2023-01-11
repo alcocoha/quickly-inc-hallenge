@@ -68,7 +68,7 @@ export const Login = () => {
     if (sessionActive) {
       navigate('/404');
     }
-  }, []);
+  }, [navigate, sessionActive]);
 
   return (
     <CustomCard title="Login" width={500}>
