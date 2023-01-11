@@ -5,6 +5,7 @@ import { CustomCard } from 'components/CustomCard';
 import { DataSessionContext } from 'providers/DataSessionProvider';
 import { useApi } from 'hooks/useApi';
 import { API_PATH } from 'api/servicespath';
+import './styles.scss';
 
 export const Profile = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ export const Profile = () => {
 
   return (
     <>
-      {userData && (
+      {userData ? (
         <CustomCard
           title={`Hello, ${userData.user.full_name} `}
           width={500}
@@ -45,6 +46,8 @@ export const Profile = () => {
             </p>
           </div>
         </CustomCard>
+      ) : (
+        <p className="text">Loading data...</p>
       )}
     </>
   );
