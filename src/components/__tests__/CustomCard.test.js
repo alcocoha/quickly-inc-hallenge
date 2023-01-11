@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { CustomCard } from './CustomCard';
+import { CustomCard } from '../CustomCard';
 
 test('renders component', () => {
   render(

@@ -1,26 +1,29 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+
+import { DataSessionContext } from 'providers/DataSessionProvider';
+import { menuLogin, menuLogout } from 'utils/constants';
 import './styles.scss';
 
 /**
  * Component Navbar that crosses the entire application
  * title: string
- * menu: array of objects [{
- *  id
- *  name
- *  link
- * }...]
  */
-export const Header = ({ title, menu = [] }) => {
-  const buildMenu = () =>
-    menu.map((item) => (
+export const Header = ({ title }) => {
+  const { sessionActive } = useContext(DataSessionContext);
+
+  const buildMenu = () => {
+    const data = sessionActive ? menuLogin : menuLogout;
+    return data.map((item) => (
       <Link to={item.link} key={item.id}>
         <span>{item.name}</span>
       </Link>
     ));
+  };
 
   return (
     <Navbar key="sm" bg="light" expand="sm" className="mb-3 navbar-container">

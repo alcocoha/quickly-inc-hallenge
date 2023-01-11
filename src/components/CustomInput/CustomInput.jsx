@@ -10,18 +10,27 @@ import './styles.scss';
  * value: dynamic string
  * errorMessage: error string
  */
-export const InputText = ({
+export const CustomInput = ({
+  id,
   type = 'text',
   onChange = () => {},
   placeholder = '',
   label = '',
   value = '',
-  errorMessage = ''
+  errorMessage = '',
+  onBlur = () => {}
 }) => {
   return (
     <Form.Group className="mb-3 input-container">
       <Form.Label>{label}</Form.Label>
-      <Form.Control type={type} placeholder={placeholder} onChange={onChange} value={value} />
+      <Form.Control
+        id={id}
+        type={type}
+        placeholder={placeholder}
+        onChange={onChange}
+        value={value}
+        onBlur={onBlur}
+      />
       {errorMessage && <Form.Text className="input-container__error">{errorMessage}</Form.Text>}
     </Form.Group>
   );

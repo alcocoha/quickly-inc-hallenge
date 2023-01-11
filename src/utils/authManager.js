@@ -1,5 +1,5 @@
-export const createSession = (name, type, program) => {
-  localStorage.setItem('session', JSON.stringify({ name, type, program }));
+export const createSession = (data) => {
+  localStorage.setItem('session', JSON.stringify(data));
 };
 
 export const getSessionData = () => {

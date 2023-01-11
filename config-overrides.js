@@ -5,7 +5,11 @@ module.exports = function override(config) {
     components: 'src/components',
     pages: 'src/pages',
     utils: 'src/utils',
-    routes: 'src/routes'
+    routes: 'src/routes',
+    hooks: 'src/hooks',
+    api: 'src/api',
+    assets: 'src/assets',
+    providers: 'src/providers'
   })(config);
 
   return config;
