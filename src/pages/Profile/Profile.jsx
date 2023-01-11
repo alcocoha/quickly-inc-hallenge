@@ -1,11 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 
-import { CustomInput } from 'components/CustomInput';
 import { CustomCard } from 'components/CustomCard';
-import { getSessionData } from 'utils/authManager';
 import { DataSessionContext } from 'providers/DataSessionProvider';
 import { useApi } from 'hooks/useApi';
 import { API_PATH } from 'api/servicespath';
